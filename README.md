@@ -1,29 +1,24 @@
-# Next.js + Tailwind CSS Example
+# What
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Next.js lists server side rendering as its main feature. Most of the solutions (although not all) for CSS at [Next.js examples](https://github.com/vercel/next.js/tree/canary/examples) however do not seem to render styles on the server render.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+Examples do not specifically say (in most cases) whether the solution should work on server or not. Because of that I'm not sure whether this is intended behaviour or not.
 
-## Preview
+# Demo
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+https://next-css-ssr-test.vercel.app
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+You can clone and install the repo.
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+```
+git clone https://github.com/cibulka/next-css-ssr-test.git
+cd next-css-ssr-test
+npm run install
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+![Screenshot of demo](/screenshot.png?raw=true "Screenshot of demo")
+
+# Why
+
+For my styles I've used (react-jss)[https://cssinjs.org/jss-syntax/], where everything works as expected. In the recent time I've started to play with Tailwind (and like it a lot) and after some time I've noticed FOUC and (after further testing) that styles do not seem to render on server at all.

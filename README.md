@@ -21,4 +21,4 @@ npm run dev
 
 # Why
 
-For my styles I've used (react-jss)[https://cssinjs.org/jss-syntax/], where everything works as expected. In the recent time I've started to play with Tailwind (and like it a lot) and after some time I've noticed FOUC and (after further testing) that styles do not seem to render on server at all.
+For my styles I've used [react-jss](https://cssinjs.org/jss-syntax/), where everything works as expected. In the recent time I've started to play with Tailwind (and like it a lot) and after some time I've noticed FOUC and (after further testing) that styles do not seem to render on server at all.
